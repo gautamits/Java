@@ -1,0 +1,5 @@
+#!/bin/bash
+source=$1
+class=$( echo $1|cut -d'.' -f1 )
+#echo $source is being compiled and $class is being run
+if javac $source; then java $class; fi
